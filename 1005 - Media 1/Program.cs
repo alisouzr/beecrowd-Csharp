@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace _1005___Media_1
 {
@@ -10,12 +11,14 @@ namespace _1005___Media_1
     {
         static void Main(string[] args)
         {
-            double a = double.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
+            double A, B, media;
 
-            double media = ((a*3.5) + (b*7.5))/11;
+            A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("MEDIA = "+media);
+            media = (A * 3.5 + B * 7.5) / 11;
+
+            Console.WriteLine("MEDIA = " + media.ToString("F5", CultureInfo.InvariantCulture));
             Console.ReadLine();
         }
     }

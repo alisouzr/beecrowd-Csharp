@@ -9,17 +9,51 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int contador = 0;
+            string[] palavras = { "Victor", "Lima", "Guia do prog", "Formaçãõ", "Curso de C#" };
 
-            while(contador < 4)
+            for (int i = 0; i < palavras.Length; i++)
             {
-                Console.WriteLine("Número contador em: " + contador);
-                contador++;
+                Console.WriteLine(palavras[i]);
+            }
+
+            for(int a = palavras.Length -1; a >= 0; a--)
+            {
+                Console.WriteLine(palavras[a]);
             }
 
             Console.ReadLine();
             
         }
+
+        /*
+         string[] palavras = { "Victor", "Lima", "Guia do prog", "Formaçãõ", "Curso de C#" };
+            
+            foreach(string palavra in palavras)
+            {
+                Console.WriteLine(palavra);
+            }
+            Console.ReadLine();
+         */
+
+        /*
+         int contador = 0;
+
+            while(contador <= 4)
+            {
+                Console.WriteLine("Número contador em: " + contador);
+                contador++;
+            }
+
+            int contador2 = 0;
+            do
+            {
+                Console.WriteLine("do While!");
+                contador2++;
+            }while(contador2 <= 10);
+
+            Console.WriteLine("FIM DA LINHA!");
+            Console.ReadLine();
+         */
 
         /*
          * enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar }
